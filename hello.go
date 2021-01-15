@@ -5,11 +5,9 @@ import (
 	"reflect"
 )
 
-var err error
-
-func Hello(name interface{}) (string, error) {
+func Hello(name interface{}) string {
 	if reflect.TypeOf(name).Kind() != reflect.String {
-		return "", fmt.Errorf("%s is wrong input", name)
+		return ""
 	}
-	return fmt.Sprintf("hello %s\n", name), nil
+	return fmt.Sprintf("hello %s\n", name)
 }

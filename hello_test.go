@@ -5,8 +5,8 @@ import (
 )
 
 func TestHello(t *testing.T) {
-	_, err := Hello("hoge")
-	if err != nil {
+	val:= Hello("hoge")
+	if val != "" {
 		t.Error("A returned value must be a string")
 	}
 }
